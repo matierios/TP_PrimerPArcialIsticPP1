@@ -10,7 +10,7 @@ while(!feof($archivo))
   {
       if ($json->Clave == $_GET['Clave'])
       {
-            header("Location: IngresoVehiculo.php");
+            header("Location: LoginOk.php");
             fclose($archivo);
             exit();
       } 

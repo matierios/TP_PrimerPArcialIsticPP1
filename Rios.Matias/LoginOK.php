@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="https://olavarria.soluparking.com.ar/Portal/images/isoE.png">
 
-    <title>Registro</title>
+    <title>Bienvenido</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
     <link href="sticky-footer-navbar.css" rel="stylesheet">
   </head>
 
-  <body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT60OJACXGcjyEW2E2q4xMJ1zyAk8Fvbooipr0cK2yIFf72ZQkh">
+  <body>
 
     <header>
       <!-- Fixed navbar -->
@@ -30,36 +30,39 @@
             <li class="nav-item active">
               <a class="nav-link" href="Registro.php">Registrarse<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="Login.php">Login</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Login</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="IngresoVehiculo.php.php">Check-IN</a>
+            </li>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="Facturar.php">Facturacion</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="Precios.php">Mas Informacion</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
           </form>
         </div>
       </nav>
     </header>
 
     <!-- Begin page content -->
-    <main role="main" class="container">
-      <h1 class="mt-5">Registro exitoso</h1>
-      <p class="lead">Gracias por ser parte de nuestra comunidad</p>
-      <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
+    <main role="main" class="container" >
+      <h1 align="center">Bienvenido</h1>
+      <center>
+      <img src="https://st2.depositphotos.com/7107694/11950/v/950/depositphotos_119506646-stock-illustration-ok-flat-vector-icon.jpg" width="100"
+         height="100" align="middle">
+      </center>
+      <p class="lead">Haga click en check IN para ingresar su auto</code>.</p>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
-      </div>
-    </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+    =========================================================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>

@@ -1,32 +1,20 @@
 <?php
 
-$archivo=fopen('RegistroUsuarios.txt','r');
+$archivo=fopen('VehiculosIngresos.txt','r');
 
 while(!feof($archivo)) 
 {
   $json = json_decode(fgets($archivo));
 
-  if ($json->Usuario == $_GET['Usuario'])    
+  if ($json->Patente == $_GET['Patente'])    
   {
-      if ($json->Clave == $_GET['Clave'])
-      {
-            header("Location: IngresoVehiculo.php");
-            fclose($archivo);
-            exit();
-      } 
-      else
-      {
-          header("Location: LoginNoOK.php");
-          fclose($archivo);     
-          exit();
-      }
-        
+       echo date_diff(date_create($json->Patente),date_create(getdate()));
   }  
   
 }  
 
- header("Location: UsuarioInexistente.php");
- fclose($archivo);
-    exit();
+ #header("Location: FacturarNoOK.php");
+ #fclose($archivo);
+  #  exit();
 
 ?>

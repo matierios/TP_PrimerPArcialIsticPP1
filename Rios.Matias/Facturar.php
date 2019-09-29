@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="https://olavarria.soluparking.com.ar/Portal/images/isoE.png">
 
-    <title>ESTACIONAMIENTO</title>
+    <title>Facturacion</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -54,12 +54,17 @@
     </header>
 
     <!-- Begin page content -->
-    <main role="main" class="container">
-      <h1 class="mt-5">BIENVENIDOS AL ESTACIONAMIENTO "LA BLANQUEADA"</h1>
-      <center>
-        <img src="https://www.logisticatops.com/wp-content/uploads/sites/7/2019/02/Estacionamiento-para-vehiculos.jpg" width="800"
-         height="400" align="middle">
-      </center>
+  <main role="main" class="container">
+      
+      <h1 align="center">SISTEMA DE FACTURACION<h1>
+        <br>
+
+              <form action="HacerFacturar.php" class="text-center">
+                <p align= "center">Patente</p>
+                <input type="text" name="Patente" value="" text-align="center">
+                <br><br>
+                <input align="center" type="submit" value="Ingresar">
+          </form> 
     </main>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
