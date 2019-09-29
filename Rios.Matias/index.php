@@ -35,7 +35,7 @@
               <a class="nav-link" href="Login.php">Login</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="IngresoVehiculo.php.php">Check-IN</a>
+              <a class="nav-link" href="IngresoVehiculo.php">Check-IN</a>
             </li>
             </li>
             <li class="nav-item active">

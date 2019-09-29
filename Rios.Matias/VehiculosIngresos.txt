@@ -1,3 +1,2 @@
-{"Patente":"GYG979","Horario":"24-09-19 (23:48:02)"}
-{"Patente":"GYG979","Horario":"24-09-19 (23:56:07)"}
-{"Patente":"CUH026","Horario":"24-09-19 (19:29:38)"}
+
+{"Patente":"GYG979","Horario":"29-09-19 18:26:56"}
