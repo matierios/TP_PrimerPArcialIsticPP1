@@ -35,6 +35,13 @@
               <a class="nav-link" href="Login.php">Login</a>
             </li>
             <li class="nav-item active">
+              <a class="nav-link" href="IngresoVehiculo.php.php">Check-IN</a>
+            </li>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="Facturar.php">Facturacion</a>
+            </li>
+            <li class="nav-item active">
               <a class="nav-link" href="Precios.php">Mas Informacion</a>
             </li>
           </ul>

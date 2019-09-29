@@ -20,7 +20,7 @@
 
     <header>
       <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="index.php">Inicio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -34,11 +34,18 @@
               <a class="nav-link" href="Login.php">Login</a>
             </li>
             <li class="nav-item active">
+              <a class="nav-link" href="IngresoVehiculo.php.php">Check-IN</a>
+            </li>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="Facturar.php">Facturacion</a>
+            </li>
+            <li class="nav-item active">
               <a class="nav-link" href="Precios.php">Mas Informacion</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
           </form>
         </div>
