@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="https://olavarria.soluparking.com.ar/Portal/images/isoE.png">
 
-    <title>Error</title>
+    <title>Facturacion</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -34,11 +34,14 @@
               <a class="nav-link" href="Login.php">Login</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="IngresoVehiculo.php.php">Check-IN</a>
+              <a class="nav-link" href="IngresoVehiculo.php">Check-IN</a>
             </li>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="Facturar.php">Facturacion</a>
+              <a class="nav-link" href="Facturar.php">Check Out</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="ListadoFacturado.txt">Facturados</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="Precios.php">Mas Informacion</a>

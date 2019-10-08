@@ -38,7 +38,10 @@
             </li>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="Facturar.php">Facturacion</a>
+              <a class="nav-link" href="Facturar.php">Check Out</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="ListadoFacturado.txt">Facturados</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="Precios.php">Mas Informacion</a>

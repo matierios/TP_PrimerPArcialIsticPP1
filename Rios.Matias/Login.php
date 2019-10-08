@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,11 +34,14 @@
               <a class="nav-link" href="Login.php">Login</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="IngresoVehiculo.php.php">Check-IN</a>
+              <a class="nav-link" href="IngresoVehiculo.php">Check-IN</a>
             </li>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="Facturar.php">Facturacion</a>
+              <a class="nav-link" href="Facturar.php">Check Out</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="ListadoFacturado.txt">Facturados</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="Precios.php">Mas Informacion</a>
@@ -59,9 +62,9 @@
         <br>        
           <form action="HacerLogin.php" class="text-center">
                 <p align= "center">Usuario</p>
-                <input type="text" name="Usuario" value="">
+                <input type="text" name="Usuario" value="" placeholder="Ingrese su usuario aqui">
                 <p align="center">Clave</p>
-                <input align="center" type="Clave" name="Clave" value="">
+                <input align="center" type="Clave" name="Clave" value="" placeholder="Ingrese su clave aqui">
                 <br><br>
                 <input align="center" type="submit" value="Ingresar">
           </form> 

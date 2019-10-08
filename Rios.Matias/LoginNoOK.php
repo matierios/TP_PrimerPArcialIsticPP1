@@ -34,7 +34,17 @@
               <a class="nav-link" href="Login.php">Login</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="Precio.php">Mas Informacion</a>
+              <a class="nav-link" href="IngresoVehiculo.php">Check-IN</a>
+            </li>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="Facturar.php">Check Out</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="ListadoFacturado.txt">Facturados</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="Precios.php">Mas Informacion</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">

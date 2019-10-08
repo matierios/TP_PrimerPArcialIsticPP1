@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="https://olavarria.soluparking.com.ar/Portal/images/isoE.png">
 
-    <title>Registro</title>
+    <title>Facturacion</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <!-- Fixed navbar --><nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="index.php">Inicio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -52,20 +52,17 @@
           </form>
         </div>
       </nav>
-      </nav>
     </header>
 
     <!-- Begin page content -->
-    <main role="main" class="container">
-      <h1 class="mt-5" align="center">Registro exitoso</h1>
-      <center>
-      <img src="https://st2.depositphotos.com/7107694/11950/v/950/depositphotos_119506646-stock-illustration-ok-flat-vector-icon.jpg" width="100"
-         height="100" align="middle">
-      </center>
-      <p class="lead">Gracias por ser parte de nuestra comunidad</p>
-      <p class="lead">Haga click en LOGIN para registrar su vehiculo</p>
+    <main role="main" class="container" >
+      <h1 align="center">Debe Abonar</h1>
+     
+      <p class="lead">Gracias por confiar en nosotros</code>.</p>
     </main>
 
+    =========================================================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="popper.min.js"></script>

@@ -35,11 +35,14 @@
               <a class="nav-link" href="Login.php">Login</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="IngresoVehiculo.php.php">Check-IN</a>
+              <a class="nav-link" href="IngresoVehiculo.php">Check-IN</a>
             </li>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="Facturar.php">Facturacion</a>
+              <a class="nav-link" href="Facturar.php">Check Out</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="ListadoFacturado.txt">Facturados</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="Precios.php">Mas Informacion</a>
@@ -59,7 +62,7 @@
       <h1 align="center">SISTEMA DE FACTURACION<h1>
         <br>
 
-              <form action="HacerFacturar.php" class="text-center">
+         <form action="HacerFacturar.php" class="text-center">
                 <p align= "center">Patente</p>
                 <input type="text" name="Patente" value="" text-align="center">
                 <br><br>

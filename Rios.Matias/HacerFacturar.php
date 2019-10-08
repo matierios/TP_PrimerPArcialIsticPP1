@@ -15,26 +15,29 @@ while(!feof($archivo))
    $dteStart = new DateTime($FechaActual);
    $dteEnd   = new DateTime($FechaSalida);
    $dteDiff  = $dteStart->diff($dteEnd);
-   echo "Fecha Actual: ",$FechaActual;
-   echo "Fecha Salida", $FechaSalida;
-   echo "Diferencia: ",$dteDiff->format("%h");
+   echo "Fecha Actual: : ",$FechaActual;
+   echo "  Fecha Salida: ", $FechaSalida;
+   $Final = $FechaActual-$FechaSalida;
+   $Hora=$dteDiff->format("%h");
+   $Min=$dteDiff->format("%i");
+
+   if ($Hora >0)
+   {
+    $PHora = $Hora*60;
+   }
+
+   if ($Min >=30)
+   {
+    $PMin = 30;
+   }
+
+   $PrecioFinal = $PHora + $PMin;
+
+   header("location:FacturarOK.php?$Hora=$PrecioFinal");   
+
+  
   }  
-
-  $Hora = $dteDiff->format("%H");
-
-  #if ($Hora > 0)
-  #{
-   # $PrecioHora = 60 * $Hora;
-  #}
-
-  #$PrecioFinal = $Hora;
-
-  echo  $Hora;
   
 }  
-
- #header("Location: FacturarNoOK.php");
- #fclose($archivo);
-  #  exit();
 
 ?>
