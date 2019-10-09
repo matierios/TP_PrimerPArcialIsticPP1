@@ -1,5 +1,6 @@
 <?php
-$archivo=new stdClass();
+
+$Objeto=new stdClass();
 $archivo=fopen('VehiculosIngresos.txt','r');
 date_default_timezone_set("America/Argentina/Buenos_Aires");
 $FechaActual=date("H:i:s");
@@ -33,7 +34,11 @@ while(!feof($archivo))
 
    $PrecioFinal = $PHora + $PMin;
 
-   header("location:FacturarOK.php?$Hora=$PrecioFinal");   
+   $Objeto->Precio = $PrecioFinal;
+   $Objeto->FechaSalida = $FechaSalida;
+   $Objeto->FechaActual=$FechaActual;
+   $Objeto->Patente=$_GET['Patente'];
+   header("location:FacturarOK.php?Precio=$Objeto->Precio&FechaSalida=$Objeto->FechaSalida&Patente=$Objeto->Patente");   
 
   
   }  

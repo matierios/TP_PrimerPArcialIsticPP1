@@ -57,8 +57,21 @@
     <!-- Begin page content -->
     <main role="main" class="container" >
       <h1 align="center">Debe Abonar</h1>
-     
-      <p class="lead">Gracias por confiar en nosotros</code>.</p>
+     <h2 align="center"> 
+      <?php 
+        echo $_GET['Precio']," $";
+
+        $miobjeto=new stdClass();
+        $miobjeto->Patente=$_GET['Patente'];
+        $miobjeto->FechaSalida =$_GET['FechaSalida'];        
+
+        $archivo=fopen('VehiculosFacturados.txt','a');
+        fwrite($archivo,json_encode($miobjeto)."\n");
+        fclose($archivo);
+
+       ?>
+     </h2>
+      <p align="center" class="lead">Gracias por confiar en nosotros</code>.</p>
     </main>
 
     =========================================================================================== -->
