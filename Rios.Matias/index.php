@@ -48,7 +48,13 @@
               <a class="nav-link" href="LeerUsuarios.php">Listar Usuarios</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="Precios.php">Mas Informacion</a>
+              <a class="nav-link" href="LeerVehiculos.php">Listar Vehiculos</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="LeerUsuarios.php">Facturados</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="LeerFacturados.php">Mas Informacion</a>
             </li>            
           </ul>
           <form class="form-inline mt-2 mt-md-0">

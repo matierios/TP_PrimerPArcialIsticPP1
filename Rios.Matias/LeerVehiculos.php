@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="https://olavarria.soluparking.com.ar/Portal/images/isoE.png">
 
-    <title>Usuarios</title>
+    <title>Vehiculos</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -59,15 +59,15 @@
     </header>
 
     <main role="main" class="container">
-      <h2 class="mt-5">Lista de usuarios</h2>
+      <h2 class="mt-5">Lista de vehiculos Ingresados</h2>
 		<ul>
 			<?php
-			$miArchivo = fopen("RegistroUsuarios.txt", "r") ;
+			$miArchivo = fopen("VehiculosIngresos.txt", "r") ;
 			
 			while(!feof($miArchivo)) 
 			{
   				$objeto = json_decode(fgets($miArchivo));
-  				echo "<li>".$objeto->Usuario."</li>";
+  				echo "<li>"."Patente: ".$objeto->Patente." Horario:  ".$objeto->Horario."</li>";
 			}
 			fclose($miArchivo);
 			?>
