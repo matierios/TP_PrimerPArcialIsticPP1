@@ -19,7 +19,7 @@
   <body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT60OJACXGcjyEW2E2q4xMJ1zyAk8Fvbooipr0cK2yIFf72ZQkh">
 
     <header>
-     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="index.php">Inicio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -43,8 +43,17 @@
               <a class="nav-link" href="ListadoFacturado.txt">Facturados</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="Precios.php">Mas Informacion</a>
+              <a class="nav-link" href="LeerUsuarios.php">Listar Usuarios</a>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="LeerVehiculos.php">Listar Vehiculos</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="LeerFacturados.php">Facturados</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="Precios.php">Mas Informacion</a>
+            </li>            
           </ul>
           <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search">

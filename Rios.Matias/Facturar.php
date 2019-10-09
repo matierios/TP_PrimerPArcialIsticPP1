@@ -59,7 +59,7 @@
     <!-- Begin page content -->
   <main role="main" class="container">
       
-      <h1 align="center">SISTEMA DE FACTURACION<h1>
+      <h1 align="center">CHECK OUT<h1>
         <br>
 
          <form action="HacerFacturar.php" class="text-center">

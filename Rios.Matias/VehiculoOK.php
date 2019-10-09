@@ -38,11 +38,23 @@
             </li>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="Facturar.php">Facturacion</a>
+              <a class="nav-link" href="Facturar.php">Check Out</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="ListadoFacturado.txt">Facturados</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="LeerUsuarios.php">Listar Usuarios</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="LeerVehiculos.php">Listar Vehiculos</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="LeerFacturados.php">Facturados</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="Precios.php">Mas Informacion</a>
-            </li>
+            </li>            
           </ul>
           <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search">

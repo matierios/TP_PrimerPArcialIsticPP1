@@ -3,3 +3,6 @@
 {"Usuario":"sistemas","Clave":"sistemas"}
 {"Usuario":"Luis","Clave":"Layco"}
 {"Usuario":"prueba","Clave":"prueba"}
+{"Usuario":"emilia","Clave":"1029"}
+{"Usuario":"dionel","Clave":"marmori"}
+{"Usuario":"leo","Clave":"santoro"}
