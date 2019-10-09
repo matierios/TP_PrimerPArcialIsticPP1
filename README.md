@@ -1,2 +1,2 @@
 # TP_PrimerPArcialIsticPP1
-Repositorio de Ejercicios de los alumnos
+Alumno Rios Matias 1er año Analista de Sistemas
