@@ -6,3 +6,5 @@
 {"Usuario":"emilia","Clave":"1029"}
 {"Usuario":"dionel","Clave":"marmori"}
 {"Usuario":"leo","Clave":"santoro"}
+{"Usuario":"del potro","Clave":"tenista"}
+{"Usuario":"pruebasis","Clave":"1234"}

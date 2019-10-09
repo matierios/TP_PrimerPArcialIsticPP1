@@ -67,7 +67,9 @@
 			while(!feof($miArchivo)) 
 			{
   				$objeto = json_decode(fgets($miArchivo));
+          
   				echo "<li>"."Patente: ".$objeto->Patente." HorarioEntrada:  ".$objeto->FechaEntrada." HorarioSalida: ".$objeto->FechaSalida." Monto Cobrado: ".$objeto->Precio."$"."</li>";
+          
 			}
 			fclose($miArchivo);
 			?>

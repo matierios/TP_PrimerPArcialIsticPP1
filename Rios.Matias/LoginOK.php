@@ -53,7 +53,10 @@
               <a class="nav-link" href="LeerFacturados.php">Facturados</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="Precios.php">Mas Informacion</a>
+              <a class="nav-link" href="Precios.php">Precios</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="">Usuario: <?php echo $_GET['Login']?></a>
             </li>            
           </ul>
           <form class="form-inline mt-2 mt-md-0">
@@ -67,6 +70,11 @@
     <!-- Begin page content -->
     <main role="main" class="container" >
       <h1 align="center">Bienvenido</h1>
+      <h2 align="center">
+        <?php
+      echo $_GET['Login']
+      ?>
+      </h2>
       <center>
       <img src="https://st2.depositphotos.com/7107694/11950/v/950/depositphotos_119506646-stock-illustration-ok-flat-vector-icon.jpg" width="100"
          height="100" align="middle">
