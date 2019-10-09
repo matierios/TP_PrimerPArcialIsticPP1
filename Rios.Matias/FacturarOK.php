@@ -63,7 +63,9 @@
 
         $miobjeto=new stdClass();
         $miobjeto->Patente=$_GET['Patente'];
-        $miobjeto->FechaSalida =$_GET['FechaSalida'];        
+        $miobjeto->FechaEntrada=$_GET['FechaEntrada'];
+        $miobjeto->FechaSalida=$_GET['FechaSalida'];
+        $miobjeto->Precio=$_GET['Precio'];        
 
         $archivo=fopen('VehiculosFacturados.txt','a');
         fwrite($archivo,json_encode($miobjeto)."\n");

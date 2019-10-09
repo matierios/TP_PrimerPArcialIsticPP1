@@ -3,7 +3,7 @@
 $Objeto=new stdClass();
 $archivo=fopen('VehiculosIngresos.txt','r');
 date_default_timezone_set("America/Argentina/Buenos_Aires");
-$FechaActual=date("H:i:s");
+$FechaSalida=date("d-m-y H:i:s");
 
 while(!feof($archivo)) 
 {
@@ -11,14 +11,12 @@ while(!feof($archivo))
 
   if ($json->Patente == $_GET['Patente'])    
   {
-       #$Dif=date_diff(date_create($FechaActual),date_create($json->Horario));
-   $FechaSalida = substr($json->Horario,8,14);
-   $dteStart = new DateTime($FechaActual);
+       #$Dif=date_diff(date_create($FechaSalida),date_create($json->Horario));
+   $FechaEntrada = substr($json->Horario,8,14);
+   $dteStart = new DateTime($FechaEntrada);
    $dteEnd   = new DateTime($FechaSalida);
    $dteDiff  = $dteStart->diff($dteEnd);
-   echo "Fecha Actual: : ",$FechaActual;
-   echo "  Fecha Salida: ", $FechaSalida;
-   $Final = $FechaActual-$FechaSalida;
+   $Final = $FechaSalida-$FechaEntrada;
    $Hora=$dteDiff->format("%h");
    $Min=$dteDiff->format("%i");
 
@@ -27,18 +25,18 @@ while(!feof($archivo))
     $PHora = $Hora*60;
    }
 
-   if ($Min >=30)
+   if ($Min >=1)
    {
-    $PMin = 30;
+    $PMin = $Min*2;
    }
 
    $PrecioFinal = $PHora + $PMin;
 
    $Objeto->Precio = $PrecioFinal;
-   $Objeto->FechaSalida = $FechaSalida;
-   $Objeto->FechaActual=$FechaActual;
+   $Objeto->FechaEntrada = $FechaEntrada;
+   $Objeto->FechaEntrada=$FechaEntrada;
    $Objeto->Patente=$_GET['Patente'];
-   header("location:FacturarOK.php?Precio=$Objeto->Precio&FechaSalida=$Objeto->FechaSalida&Patente=$Objeto->Patente");   
+   header("location:FacturarOK.php?Precio=$Objeto->Precio&FechaEntrada=$json->Horario&Patente=$Objeto->Patente&FechaSalida=$FechaSalida");   
 
   
   }  

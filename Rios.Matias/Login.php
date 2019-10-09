@@ -46,8 +46,14 @@
             <li class="nav-item active">
               <a class="nav-link" href="Precios.php">Mas Informacion</a>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="RegistroUsuarios.php">Listar Usuarios</a>
+            </li>
           </ul>
-          <form class="form-inline mt-2 mt-md-0">
+          <form class="form-inline mt
+          <li class="nav-item active">
+              <a class="nav-link" href="Precios.php">Listar Usuarios</a>
+            </li>-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
           </form>
