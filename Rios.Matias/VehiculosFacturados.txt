@@ -1,3 +1,2 @@
-{"Patente":null,"FechaSalida":" 10:22:50"}
-{"Patente":null,"FechaSalida":" 10:22:50"}
-{"Patente":"PHP123","FechaSalida":" 10:22:50"}
+{"Patente":"GYG979","FechaEntrada":"29-09-19 18:26:56","FechaSalida":"09-10-19 14:38:24","Precio":"276"}
+{"Patente":"PHP123","FechaEntrada":"08-10-19 10:22:50","FechaSalida":"09-10-19 14:38:29","Precio":"1228"}
