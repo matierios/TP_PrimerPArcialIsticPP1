@@ -1,8 +1,3 @@
-<?php 
-session_start();
-
- ?>
-
 <!doctype html>
 <html lang="es">
   <head>
@@ -36,42 +31,9 @@ session_start();
             <li class="nav-item active">
               <a class="nav-link" href="/Rios.Matias/Paginas/Login.php">Login</a>
             </li>
-            <?php 
-                if (isset($_SESSION['usuario'])==1):
-
-             ?>
-            <li class="nav-item active">
-              <a class="nav-link" href="/Rios.Matias/Paginas/IngresoVehiculo.php">Ingreso</a>
-            </li>            
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/Rios.Matias/Paginas/Facturar.php">Egreso</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/Rios.Matias/Funciones/LeerVehiculos.php">Vehiculos</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/Rios.Matias/Funciones/HacerLogout.php">Log-Out</a>
-            </li> 
-            <li class="nav-item active">
-              <a class="nav-link"> Usuario:<?php print_r($_SESSION['usuario']) ; ?></a>
-            </li>
-            <?php endif;  ?>
-            <?php 
-                if ((isset($_SESSION['usuario'])==1) && ($_SESSION['admin'] == 1)):
-            ?>
-             <li class="nav-item active">
-              <a class="nav-link" href="/Rios.Matias/Funciones/LeerFacturados.php">Facturados</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/Rios.Matias/Funciones/LeerUsuarios.php">Usuarios</a>
-            </li>
-            
-            <?php endif;  ?>
             <li class="nav-item active">
               <a class="nav-link" href="/Rios.Matias/Paginas/Precios.php">Mas Informacion</a>
             </li>            
-          
           </ul>
           <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search">

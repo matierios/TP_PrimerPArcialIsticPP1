@@ -1,12 +1,18 @@
 <?php
+
+session_start();
+
+include '../DB/Accesodatos.php';
+
 $miobjeto=new stdClass();
 $miobjeto->Patente=$_GET['Patente'];
 date_default_timezone_set("America/Argentina/Buenos_Aires");
-$miobjeto->Horario=date("d-m-y H:i:s");
+$miobjeto->Horario=mktime();
 
-$archivo=fopen('..\Archivos\VehiculosIngresos.txt','a');
-fwrite($archivo,json_encode($miobjeto)."\n");
-fclose($archivo);
+
+$query =$BaseDeDatos->prepare("insert into Vehiculos (v_patente,v_horario_ingreso) values ('$miobjeto->Patente','$miobjeto->Horario')");
+$query->execute();			
+
 
 header("Location: ..\Paginas\VehiculoOK.php");
 ?>

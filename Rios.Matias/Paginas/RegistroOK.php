@@ -1,3 +1,7 @@
+<?php
+session_start();
+  ?>
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -18,7 +22,7 @@
          height="100" align="middle">
       </center>
       <p class="lead">Gracias por ser parte de nuestra comunidad</p>
-      <p class="lead">Haga click en LOGIN para registrar su vehiculo</p>
+      <p class="lead">Haga click en LOGIN iniciar sesion</p>
     </main>
 
   </body>

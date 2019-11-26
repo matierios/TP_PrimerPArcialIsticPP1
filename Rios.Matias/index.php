@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <?php include ('Headers/Header.php'); ?>
+    <title>Estacionamiento</title>
   </head>
 <body>  
     <main role="main" class="container">

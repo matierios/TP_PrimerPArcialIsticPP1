@@ -4,3 +4,8 @@
 {"Patente":"EEE111","FechaEntrada":"09-10-19 18:07:58","FechaSalida":"09-10-19 20:09:12","Precio":"122"}
 {"Patente":"HHH000","FechaEntrada":"23-10-19 21:48:38","FechaSalida":"23-10-19 22:19:50","Precio":"62"}
 {"Patente":"PHP123","FechaEntrada":"08-10-19 10:22:50","FechaSalida":"29-10-19 19:36:16","Precio":"566"}
+{"Patente":"GYG979","FechaEntrada":"1574638780","FechaSalida":"19-11-25 14:49:16","Precio":"18.16"}
+{"Patente":"GYG979","FechaEntrada":"1574638780","FechaSalida":"19-11-25 14:49:16","Precio":"18.16"}
+{"Patente":"GYG979","FechaEntrada":"1574638780","FechaSalida":"19-11-25 14:49:16","Precio":"18.16"}
+{"Patente":"GYG979","FechaEntrada":"1574638780","FechaSalida":"19-11-25 14:49:16","Precio":"18.16"}
+{"Patente":"GYG979","FechaEntrada":"19-11-25 18:52:53","FechaSalida":"19-11-25 19:02:53","Precio":"2614.825"}

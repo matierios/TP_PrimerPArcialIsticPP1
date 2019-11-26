@@ -1,5 +1,10 @@
+<?php  
+
+session_start();
+?>
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     
     <title>Patente</title>
@@ -7,9 +12,6 @@
 <?php include ('../Headers/Header.php'); ?>
   </head>
 
-  <body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT60OJACXGcjyEW2E2q4xMJ1zyAk8Fvbooipr0cK2yIFf72ZQkh">
-
-    
     <!-- Begin page content -->
     <main role="main" class="container">
 

@@ -1,33 +1,43 @@
 <?php
 
-$archivo=fopen('..\Archivos\RegistroUsuarios.txt','r');
+session_start();
+include '../DB/AccesoDatos.php';
 
-while(!feof($archivo)) 
-{
-  $json = json_decode(fgets($archivo));
+$query =$BaseDeDatos->prepare("select usr_nombre ,usr_clave,usr_admin from Usuarios");
+$query->execute();     
+$datos= $query->fetchAll(PDO::FETCH_ASSOC); 
 
-  if ($json->Usuario == $_GET['Usuario'])    
-  {
-      if ($json->Clave == $_GET['Clave'])
+
+      foreach ($datos as $usuarios) 
       {
-            header("Location: ..\Paginas\LoginOk.php?Login=$json->Usuario");
-            fclose($archivo);
-            exit();
-      } 
-      else
-      {
-          header("Location: ..\Paginas\LoginNoOK.php");
-          fclose($archivo);     
-          exit();
-      }
+         if ($usuarios['usr_nombre'] == $_GET['Usuario'])    
+            {
+                if ($usuarios['usr_clave'] == $_GET['Clave'])
+                    {
+                        $_SESSION['usuario']=$usuarios['usr_nombre'];
+                        $_SESSION['admin']=$usuarios['usr_admin'];
+                        header("Location: ..\Paginas\LoginOk.php?admin=".$usuarios['usr_admin']);
+                        exit;
+                    } 
+                else
+                    {
+                      echo "Fallo clave";
+                     header("Location: ..\Paginas\LoginNoOK.php");
+                     exit;
+
+                    }
         
-  }  
+            }
+          else
+            {
+            header("Location: ..\Paginas\UsuarioInexistente.php");
+          }  
+       } 
+    
   
-}  
+  
 
 
- header("Location: ..\Paginas\UsuarioInexistente.php");
- fclose($archivo);
-    exit();
+  
 
 ?>

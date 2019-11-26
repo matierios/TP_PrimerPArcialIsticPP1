@@ -1,51 +1,71 @@
 <?php
 
-$Objeto=new stdClass();
-$archivo=fopen('../Archivos/VehiculosIngresos.txt','r');
+session_start();
+
+include '../DB/AccesoDatos.php';
 date_default_timezone_set("America/Argentina/Buenos_Aires");
-$FechaSalida=date("H:i:s");
-$CheckOut=date("d-m-y H:i:s");
+$Objeto=new stdClass();
+$HoraSalida=mktime();
+$FechaSalida=Date("d-m-yyyy H:i:s");
 
-while(!feof($archivo)) 
+
+
+$query =$BaseDeDatos->prepare("select v_patente ,v_horario_ingreso from Vehiculos");
+$query->execute();     
+$datos= $query->fetchAll(PDO::FETCH_ASSOC); 
+
+
+
+foreach ($datos as $vehiculos) 
 {
-  $json = json_decode(fgets($archivo));
+    if ($vehiculos['v_patente'] == $_GET['Patente'])    
+      {
+          
+          $HoraEntrada = $vehiculos['v_horario_ingreso'];
+          $FechaEntrada = Date("d-m-yyyy H:i:s",$vehiculos['v_horario_ingreso']);
+          
 
-  if ($json->Patente == $_GET['Patente'])    
-  {
-       #$Dif=date_diff(date_create($FechaSalida),date_create($json->Horario));
-   $CheckIn= $json->Horario;
-   $FechaEntrada = substr($json->Horario,8,14);
-   $dteStart = new DateTime($FechaEntrada);
-   $dteEnd   = new DateTime($FechaSalida);
-   $dteDiff  = $dteEnd->diff($dteStart);
-   $Final = $FechaSalida-$FechaEntrada;
-   $Hora=$dteDiff->format("%h");
-   $Min=$dteDiff->format("%i");
+          $Diff = $HoraSalida - $HoraEntrada;
+    $PMin=0;
+    $Pseg=0;      
 
-   echo $Hora."".$Min;
+          if ($Diff >3600)
+              {
+                  $PHora = (($Diff/3600)*90);
+              }
+              else
+              {
+                  if ($Diff > 60)
+                  {
+                    $PMin = (($Diff/60)*60);
+                  }
+                  else
+                  {
+                    $Pseg = (($Diff/1)*40);
+                  }
 
-   if ($Hora >0)
-   {
-    $PHora = $Hora*60;
-   }
+              }
 
-   if ($Min >=1)
-   {
-    $PMin = $Min*2;
-   }
 
-   $PrecioFinal = $PHora + $PMin;
 
-   $Objeto->Precio = $PrecioFinal;
-   $Objeto->FechaEntrada = $FechaEntrada;
-   $Objeto->FechaEntrada=$FechaEntrada;
-   $Objeto->Patente=$_GET['Patente'];
-   header("location:../Paginas/FacturarOK.php?Precio=$Objeto->Precio&FechaEntrada=$json->Horario&Patente=$Objeto->Patente&FechaSalida=$CheckOut");   
+          $PrecioFinal = $PHora + $PMin + $Pseg;
+
+          $Objeto->Precio = $PrecioFinal;
+          $Objeto->FechaEntrada = $FechaEntrada;
+          $Objeto->FechaSalida = $FechaSalida;
+          $Objeto->Patente=$_GET['Patente'];
+
+
+$query =$BaseDeDatos->prepare("insert into VehiculosFacturados (vf_patente,vf_fecha_ingreso,vf_fecha_salida,vf_precio) values ('$Objeto->Patente','$Objeto->FechaEntrada','$Objeto->FechaSalida','$Objeto->Precio')");
+$query->execute();    
+          
+          header("location:../Paginas/FacturarOK.php?Precio=$Objeto->Precio&FechaEntrada=$Objeto->FechaEntrada&Patente=".$vehiculos['v_patente']."&FechaSalida=$Objeto->FechaSalida");   
 
   
-  }  
+        }  
   
-} 
+   
+  } 
 
 
 ?>

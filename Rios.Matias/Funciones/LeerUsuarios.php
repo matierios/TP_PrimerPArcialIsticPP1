@@ -3,30 +3,39 @@
 <head>
 
     <title>Usuarios</title>
-    <?php include ('../Headers/Header.php'); ?>
+    <?php 
+    include ('../Headers/Header.php'); 
+    include ('../DB/AccesoDatos.php'); 
+    ?>
     
   </head>
 <body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT60OJACXGcjyEW2E2q4xMJ1zyAk8Fvbooipr0cK2yIFf72ZQkh">
 
-
-    <main role="main" class="container">
+<main role="main" class="container">
       <h2 class="mt-5">Lista de usuarios</h2>
-		<ul>
-			<?php
-			$miArchivo = fopen("../Archivos/RegistroUsuarios.txt", "r") ;
-			
-			while(!feof($miArchivo)) 
-			{
-  				$objeto = json_decode(fgets($miArchivo));
-          if (isset($objeto->Usuario) !="")
-          {
-  				echo "<li>".$objeto->Usuario."</li>";
-        }
-			}
-			fclose($miArchivo);
-			?>
-		</ul> 
-      
+    
+        <table border="1">
+          <tr>
+            <th>Patente</th>
+            <th>Admin</th>
+          </tr>
+      <?php  
+      $query =$BaseDeDatos->prepare("SELECT usr_nombre,usr_admin FROM Usuarios");
+      $query->execute();     
+      $datos= $query->fetchAll(PDO::FETCH_ASSOC); 
+
+
+        foreach ($datos as $usuarios):?>
+          
+          <tr>
+            <td><?php echo $usuarios['usr_nombre']; ?></td>
+            <td><?php echo $usuarios['usr_admin']; ?></td>
+            <?php endforeach;  ?>
+          </tr>
+            
+          </table>
+        
+    </ul> 
     </main>
 
 
